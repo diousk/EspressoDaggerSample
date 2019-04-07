@@ -6,8 +6,9 @@ import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
 
+
 @Module
-class MainModule {
+class MainMockModule {
     @Provides
     fun provideMainView(activity: MainActivity): MainView {
         return activity
@@ -15,7 +16,7 @@ class MainModule {
 
     @Provides
     fun provideMainModel(): MainModel {
-        return MainModelImpl()
+        return MainMockModelImpl() // <-- here we replace with mock one
     }
 
     @Provides

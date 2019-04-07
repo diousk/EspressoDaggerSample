@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import com.example.espressodaggersample.App
 import dagger.Module
 import dagger.Provides
+import dagger.android.support.DaggerApplication
 import javax.inject.Singleton
 
 @Module

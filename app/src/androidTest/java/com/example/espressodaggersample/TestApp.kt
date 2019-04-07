@@ -1,17 +1,16 @@
 package com.example.espressodaggersample
 
 import android.util.Log
-import com.example.espressodaggersample.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 
-open class App: DaggerApplication() {
+class TestApp: App() {
     override fun onCreate() {
         super.onCreate()
-        Log.d("APP", "onCreate")
+        Log.d("TestAPP", "onCreate")
     }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        return DaggerAppComponent.builder().create(this)
+        return DaggerTestAppComponent.builder().application(this).build()
     }
 }

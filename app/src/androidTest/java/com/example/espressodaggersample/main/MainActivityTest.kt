@@ -1,4 +1,4 @@
-package com.example.espressodaggersample
+package com.example.espressodaggersample.main
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -7,7 +7,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import com.example.espressodaggersample.main.MainActivity
+import com.example.espressodaggersample.R
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -35,6 +35,6 @@ class MainActivityTest {
     fun testClickHelloWorld() {
         activityRule.launchActivity(null)
         onView(withId(R.id.helloText)).perform(click())
-        onView(withId(R.id.helloText)).check(matches(withText("clicked")))
+        onView(withId(R.id.helloText)).check(matches(withText("from test")))
     }
 }
