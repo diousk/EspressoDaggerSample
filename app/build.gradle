@@ -58,4 +58,6 @@ dependencies {
     androidTestImplementation "org.mockito:mockito-android:$mockito_version"
     androidTestImplementation 'com.nhaarman:mockito-kotlin:1.5.0'
     androidTestImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$dagger2_version"
+    kaptAndroidTest "com.google.dagger:dagger-android-processor:$dagger2_version"
 }

@@ -7,6 +7,6 @@ class MainViewModel(
 ): ViewModel() {
 
     fun textClick() {
-        view.onTextClick()
+        view.onTextClick("clicked")
     }
 }
